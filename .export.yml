@@ -1,0 +1,20 @@
+%YAML 1.1
+---
+version: '>=0.0.0'
+export: |
+    project "Falcor"
+        kind "StaticLib"
+            
+        files "Framework/Source/**"
+        
+        filter "system:windows"
+            removefiles "Framework/Source/API/Vulkan/**"
+            
+        filter "system:linux"
+            removefiles "Framework/Source/API/D3D12/**"
+        
+        zpm.export [[
+            includedirs "Framework/Source/"
+            cppdialect "C++11"
+        ]]
+...
