@@ -1,3 +1,4 @@
 public:
-  - name: Zefiros-Software/GLM
-    version: '@head'
+  libraries:
+      - name: Zefiros-Software/GLM
+        version: '@head'
