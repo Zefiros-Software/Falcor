@@ -10,7 +10,7 @@ project "Falcor"
         removefiles "Framework/Source/API/D3D12/**"
     
     zpm.export [[
-        includedirs "Framework/Source/"
+        includedirs "Framework/Source/API"
         cppdialect "C++11"
         
         zpm.uses {
