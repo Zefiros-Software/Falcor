@@ -1,7 +1,7 @@
 project "Falcor"
     kind "StaticLib"
         
-    files "Framework/Source/**"
+    files "Framework/Source/API/**"
     
     filter "system:windows"
         removefiles "Framework/Source/API/Vulkan/**"
@@ -12,4 +12,8 @@ project "Falcor"
     zpm.export [[
         includedirs "Framework/Source/"
         cppdialect "C++11"
+        
+        zpm.uses {
+                "Zefiros-Software/GLM"
+            }
     ]]
